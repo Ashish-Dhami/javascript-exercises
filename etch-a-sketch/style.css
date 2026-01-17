@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  padding-top: 68px;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: scroll;
+}
+.board {
+  display: flex;
+  flex-direction: column;
+  background-color: #121212;
+  cursor: crosshair;
+}
+.row {
+  display: flex;
+}
+.col {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  &.hover {
+    background-color: #fbfbfb;
+  }
+}
+
+.btn-base {
+  position: absolute;
+  top: 16px;
+  font-weight: 600;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  background-color: #4bff54;
+  border-radius: 6px;
+  cursor: pointer;
+}
