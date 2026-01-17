@@ -1,0 +1,70 @@
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: firebrick;
+}
+h1 {
+  text-align: center;
+  color: floralwhite;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+.container {
+  display: grid;
+  grid-template-rows: 200px 50px;
+  gap: 50px;
+  justify-items: center;
+}
+
+.humanSelections button {
+  padding: 8px 24px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: #70d679;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: rgb(39, 38, 38);
+  cursor: pointer;
+  & ~ button {
+    margin-left: 10px;
+  }
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+#live-score {
+  display: flex;
+  gap: 100px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: rgb(41, 49, 49);
+}
+.score {
+  font-size: 5rem;
+  color: rgb(31, 31, 31);
+}
+#results {
+  color: rgb(32, 32, 29);
+  font-size: 1.2rem;
+  padding: 8px 24px;
+  border-radius: 5px;
+  background-color: rgba(222, 184, 135, 0.6);
+  align-self: stretch;
+  flex-basis: 40px;
+}
