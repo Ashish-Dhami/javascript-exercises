@@ -23,16 +23,27 @@ function renderBoard(ROWSxCOLS = 50) {
     for (let j = 0; j < ROWSxCOLS; j++) {
       const col = document.createElement("div");
       col.className = "col";
+      col.style.opacity = "0.1";
+
       col.addEventListener("mouseenter", () => {
-        col.classList.add("hover");
+        // col.style.backgroundColor = "#fbfbfb";
+        col.style.backgroundColor = randRGB();
+        if (+col.style.opacity < 1)
+          col.style.opacity = `${+col.style.opacity + 0.1}`;
       });
-      col.addEventListener("mouseleave", () => {
-        col.classList.remove("hover");
-      });
+      // col.addEventListener("mouseleave", () => {
+      //   col.style.backgroundColor = "transparent";
+      // });
       row.appendChild(col);
     }
   }
   board.appendChild(fragment);
+}
+
+function randRGB() {
+  const min = 120;
+  const rand = () => Math.floor(min + Math.random() * (256 - min));
+  return `rgb(${rand()}, ${rand()}, ${rand()})`;
 }
 
 function cleanupBoard() {

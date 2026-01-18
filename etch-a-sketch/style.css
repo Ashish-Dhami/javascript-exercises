@@ -28,9 +28,10 @@ body {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  &.hover {
+  /* will be generating random rgb with js */
+  /* &.hover {
     background-color: #fbfbfb;
-  }
+  } */
 }
 
 .btn-base {
